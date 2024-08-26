@@ -9,10 +9,9 @@ from sql_execution import execute_mysql_query  # Import the execute_mysql_query 
 from trialprompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE1
 from savedex import schema_venum
 
-
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 # Setup env variables
-OPENAI_API_KEY =st.secrets["OPENAI_API_KEY"]
-
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY")
 # schema_details
 schema_details = schema_venum()
 
